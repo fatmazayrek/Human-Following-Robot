@@ -27,7 +27,7 @@ Servo myservo; //create servo object to control the servo:
 
 void Ultrasonik(int distance){
   
-  if(distance < 10){            //check wheather the ultrasonic sensor's value stays between 1 to 15.
+  if(distance < 10){            //check wheather the ultrasonic sensor's value stays between 1 to 10.
   
   //Stop:
   Motor1.setSpeed(0);    //define motor1 speed:
@@ -40,7 +40,7 @@ void Ultrasonik(int distance){
   Motor4.run(RELEASE);   //stop motor4:
   }
   
-  if((distance >= 10) && (distance <= 15)){            //check wheather the ultrasonic sensor's value stays between 1 to 15.
+  if((distance >= 10) && (distance <= 15)){            //check wheather the ultrasonic sensor's value stays between 10 to 15.
   
   //Move Forward:
   Motor1.setSpeed(60);  //define motor1 speed:
@@ -94,7 +94,7 @@ void setup() {
    myservo.write(110);
 
    pinMode(RIGHT, INPUT); //set analog pin RIGHT as an input:
-   pinMode(LEFT, INPUT);  //set analog pin RIGHT as an input:
+   pinMode(LEFT, INPUT);  //set analog pin LEFT as an input:
    pinMode(BuzzerPin, OUTPUT); //set BuzzerPin as an output:
 }
 
